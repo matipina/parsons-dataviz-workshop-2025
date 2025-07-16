@@ -1,0 +1,44 @@
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background-color: #003366;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+/* Main content area */
+main {
+  padding: 2em;
+}
+
+/* Headings */
+h1 {
+  color: #ffffff;
+}
+
+/* Links */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  background-color: #eee;
+  color: #333;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
+}
