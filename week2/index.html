@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 - JavaScript Introduction</title>
+  </head>
+  <body>
+    <header>
+      <h1>Week 2: JavaScript Introduction</h1>
+      <p>
+        This page demonstrates the basics of JavaScript. Open the browser console
+        to see the output of each example.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>What is <code>console.log</code>?</h2>
+        <p>
+          <code>console.log()</code> is a function in JavaScript that prints
+          messages to the browser's console. It's commonly used for debugging and
+          viewing output while learning or developing code.
+        </p>
+        <pre><code>console.log("Hello, world!");</code></pre>
+        <p>
+          To see the output, right-click the page, choose "Inspect" or "Inspect
+          Element", and open the "Console" tab.
+        </p>
+      </section>
+
+      <section>
+        <h2>Data Types Example</h2>
+        <p>JavaScript has several data types to represent different kinds of values.</p>
+        <pre><code>let age = 25; // Number
+let name = "Matías"; // String
+let isStudent = true; // Boolean
+let nothing = null; // Null
+let notDefined; // Undefined
+let person = { name: "Matías", age: 25 }; // Object
+let skills = ["HTML", "CSS", "JavaScript"]; // Array
+</code></pre>
+      </section>
+
+      <section>
+        <h2>Variables Example</h2>
+        <p>
+          Variables are containers for storing data values. Use <code>let</code> for
+          variables that can be reassigned and <code>const</code> for constants.
+        </p>
+        <pre><code>let city = "New York";
+const PI = 3.14159;
+var oldWay = "Avoid using var";
+</code></pre>
+      </section>
+
+      <section>
+        <h2>Operators Example</h2>
+        <p>Operators are used to perform operations on variables and values.</p>
+        <pre><code>let a = 5, b = 3;
+console.log(a + b); // 8
+console.log(a == b); // false
+</code></pre>
+      </section>
+
+      <section>
+        <h2>Loops Example</h2>
+        <p>Loops can execute a block of code a number of times.</p>
+        <pre><code>for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+</code></pre>
+      </section>
+
+      <section>
+        <h2>Functions Example</h2>
+        <p>Functions are blocks of code designed to perform a particular task.</p>
+        <pre><code>function greet(name) {
+  return "Hello, " + name + "!";
+}
+console.log(greet("Matías"));
+</code></pre>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Matías Piña. All rights reserved.</p>
+    </footer>
+
+    <script src="examples.js"></script>
+  </body>
+</html>
