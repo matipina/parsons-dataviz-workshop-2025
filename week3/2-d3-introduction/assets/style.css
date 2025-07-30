@@ -1,0 +1,71 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.example-container {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.viz-container {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    min-height: 100px;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: 'Menlo', 'Monaco', 'Courier New', monospace;
+}
+
+/* Styles for data binding example */
+#data-example .viz-container div {
+    color: white;
+    padding-left: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+#axis-container .domain {
+    stroke: #333; /* Axis line color */
+}
+
+#axis-container .tick line {
+    stroke: #999; /* Tick mark color */
+}
+
+#axis-container .tick text {
+    fill: #333; /* Label color */
+    font-size: 12px;
+}

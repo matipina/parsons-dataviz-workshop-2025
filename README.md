@@ -38,6 +38,19 @@ A collection of materials, glossaries, and examples for learning the basics of w
   - Open your browser console to see the output of each example.
   - Reference the JavaScript glossary in `glossaries/js-glossary.md` for data types and operators.
 
+### Week 3: JavaScript Interactivity and Introduction to D3.js
+
+Week 3 is divided into two parts to provide a solid foundation before diving into D3.
+
+- **Part 1: JavaScript Interactivity**
+  - **Topics:** Using JavaScript to manipulate HTML and CSS, event handling (`click`), and conditional logic (`if/else`).
+  - **How to use:** Open `week3/1-js-interactivity-demo/index.html` to see the Week 1 website enhanced with JavaScript.
+
+- **Part 2: Introduction to D3.js**
+  - **Topics:** D3 selections, method chaining, data binding, scales, and axis generation.
+  - **How to use:** Open `week3/2-d3-introduction/index.html` to explore the core concepts of D3.js with interactive examples.
+  - **Glossary:** A new D3.js glossary is available in `glossaries/d3-glossary.md`.
+
 ## Getting Started
 
 1. Download the repository as a ZIP file or clone it using Git:

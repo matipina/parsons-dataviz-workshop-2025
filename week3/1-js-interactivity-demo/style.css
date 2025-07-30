@@ -1,0 +1,47 @@
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.controls {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#details-section {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #333;
+    color: #eee;
+}
+
+body.dark-mode #details-section {
+    background-color: #444;
+}

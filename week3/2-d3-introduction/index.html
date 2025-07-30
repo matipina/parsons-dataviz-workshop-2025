@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 3 - Introduction to D3.js</title>
+    <link rel="stylesheet" href="./assets/style.css" />
+    <!-- Include D3.js from CDN -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Week 3: Introduction to D3.js</h1>
+      <p>
+        Learn how to create data visualizations using D3.js, building on your
+        HTML, CSS, and JavaScript knowledge.
+      </p>
+    </header>
+
+    <main>
+      <section id="what-is-d3">
+        <h2>What is D3.js?</h2>
+        <p>
+          D3.js (Data-Driven Documents) is a JavaScript library for creating
+          dynamic, interactive data visualizations in web browsers. It uses
+          HTML, SVG, and CSS to bring data to life.
+        </p>
+
+        <h3>The Core Idea: Selections and Method Chaining</h3>
+        <p>
+          D3's syntax might look different at first. The key is to understand two concepts:
+        </p>
+        <ul>
+          <li><strong>Selections:</strong> You start by "selecting" one or more HTML elements to work with using <code>d3.select()</code> (for one element) or <code>d3.selectAll()</code> (for multiple elements). This is how D3 connects to your HTML.</li>
+          <li><strong>Method Chaining:</strong> After selecting something, you "chain" methods onto it using dots (<code>.</code>). Each method performs an action on the selection (like adding an element or changing a style) and then returns the selection so you can perform another action. This creates a clean, readable sequence of operations.</li>
+        </ul>
+
+        <div class="example-container">
+            <h4>Syntax Example: Before D3 vs. With D3</h4>
+            <p>Imagine you want to select a paragraph with an ID of <code>#my-paragraph</code> and change its color and font size.</p>
+            <p><strong>Without D3 (Plain JavaScript):</strong></p>
+            <pre><code>const p = document.getElementById('my-paragraph');
+p.style.color = 'blue';
+p.style.fontSize = '20px';</code></pre>
+            <p><strong>With D3's Method Chaining:</strong></p>
+            <pre><code>d3.select('#my-paragraph')
+  .style('color', 'blue')
+  .style('font-size', '20px');</code></pre>
+            <p>Notice how D3's version is more concise and reads like a sentence: "Select the paragraph, then style its color, then style its font size."</p>
+        </div>
+
+        <h3>Attribute vs. Style</h3>
+        <p>
+          When working with D3, you'll mainly use two methods to change how elements look:
+        </p>
+        <ul>
+            <li><code>.attr("name", "value")</code>: Sets HTML <strong>attributes</strong>. This is crucial for SVGs, where attributes define geometry (e.g., a circle's <code>cx</code>, <code>cy</code>, and <code>r</code> attributes).</li>
+            <li><code>.style("property", "value")</code>: Sets CSS <strong>styles</strong>. This is for things like <code>color</code>, <code>background-color</code>, and <code>opacity</code>.</li>
+        </ul>
+
+        <h3>How to Include D3.js in Your HTML</h3>
+        <p>
+          To use D3.js, you need to include it in your HTML file. The easiest
+          way is to link to it from a Content Delivery Network (CDN), which
+          hosts the library for you. Just add the following script tag to your
+          HTML's <code>&lt;head&gt;</code> section. This is the method we are
+          using in this example.
+        </p>
+        <pre><code>&lt;script src="https://d3js.org/d3.v7.min.js"&gt;&lt;/script&gt;</code></pre>
+
+        <h3>What is SVG?</h3>
+        <p>
+          SVG (Scalable Vector Graphics) is an XML-based format for describing
+          two-dimensional vector graphics. Unlike pixel-based image formats
+          (like JPG or PNG), SVGs are resolution-independent, meaning they look
+          sharp at any size. D3.js uses SVG to create shapes, charts, and other
+          visualizations directly in the HTML DOM.
+        </p>
+
+        <div id="simple-shapes" class="example-container">
+          <h3>Example 1: Creating Simple Shapes with SVG</h3>
+          <div class="viz-container"></div>
+          <pre><code>// Create an SVG container
+const svg = d3.select(".viz-container")
+    .append("svg")
+    .attr("width", 200)
+    .attr("height", 100);
+
+// Add a circle
+svg.append("circle")
+    .attr("cx", 50)
+    .attr("cy", 50)
+    .attr("r", 20)
+    .style("fill", "steelblue");
+
+// Add a rectangle
+svg.append("rect")
+    .attr("x", 100)
+    .attr("y", 30)
+    .attr("width", 40)
+    .attr("height", 40)
+    .style("fill", "coral");</code></pre>
+        </div>
+      </section>
+
+      <section id="data-binding">
+        <h2>Data Binding</h2>
+        <p>
+          One of D3's most powerful features is data binding - connecting data
+          to DOM elements.
+        </p>
+        <p>
+          The <strong>data join</strong> is D3's signature feature. You give D3 an array of data and tell it what the corresponding elements on the page should look like. The <code>.data(array).join("element")</code> pattern is a powerful shortcut that tells D3 to make sure there is one "element" for each item in the "array". D3 automatically handles creating, updating, and removing elements to match the data.
+        </p>
+        <div id="data-example" class="example-container">
+          <h3>Example 2: Simple Data Binding</h3>
+          <div class="viz-container"></div>
+          <pre><code>const data = [4, 8, 15, 16, 23, 42];
+
+// Create bars from data
+d3.select("#data-example .viz-container")
+    .selectAll("div")
+    .data(data)
+    .join("div")
+    .style("height", "20px")
+    .style("width", d => d * 10 + "px")
+    .style("margin", "5px")
+    .style("background-color", "steelblue")
+    .text(d => d);</code></pre>
+        </div>
+      </section>
+
+      <section id="scales">
+        <h2>Scales</h2>
+        <p>
+          D3 scales help map data values to visual properties like position,
+          size, or color.
+        </p>
+        <div id="scale-example" class="example-container">
+          <h3>Example 3: Using Scales</h3>
+          <div class="viz-container"></div>
+          <pre><code>const data = [10, 30, 50, 70, 90];
+
+// Create a linear scale
+const scale = d3.scaleLinear()
+    .domain([0, 100])  // Data range
+    .range([0, 200]);  // Pixel range
+
+// Create circles with scaled sizes
+d3.select("#scale-example .viz-container")
+    .selectAll("circle")
+    .data(data)
+    .join("circle")
+    .attr("cx", (d, i) => i * 50 + 25)
+    .attr("cy", 50)
+    .attr("r", d => scale(d) / 10)
+    .style("fill", "steelblue");</code></pre>
+        </div>
+      </section>
+
+      <section id="why-d3-axis">
+        <h2>Why Use D3.js? Example: Drawing Chart Axes</h2>
+        <p>
+          A common task in data visualization is drawing axes with ticks and
+          labels. Doing this with plain JavaScript is very complex. You would
+          need to manually calculate tick positions, handle formatting, and
+          draw each line and label. D3.js automates this entire process.
+        </p>
+
+        <div id="axis-example" class="example-container">
+          <h3>Example 4: Creating an Axis with D3.js</h3>
+          <p>
+            With D3, we first create a scale that maps our data range (e.g., 0
+            to 500) to a pixel range on the screen. Then, we use D3's axis
+            generator to create the entire SVG axis component in just a few
+            lines.
+          </p>
+          <div class="viz-container" id="axis-container"></div>
+          <pre><code>// 1. Create a scale
+const axisScale = d3.scaleLinear()
+    .domain([0, 500]) // The data values
+    .range([0, 400]); // The pixel space on screen
+
+// 2. Create an SVG container
+const axisSvg = d3.select("#axis-container")
+    .append("svg")
+    .attr("width", 450)
+    .attr("height", 50);
+
+// 3. Create a group to hold the axis
+const axisGroup = axisSvg.append("g")
+    .attr("transform", "translate(20, 20)"); // Move it into view
+
+// 4. Create the axis generator and call it
+const bottomAxis = d3.axisBottom(axisScale);
+axisGroup.call(bottomAxis);</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <script src="./assets/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+/* A more refined color palette and modern styling */
+
+/* Basic body styling */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa; /* Soft off-white */
+  color: #343a40; /* Darker grey for better readability */
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+header {
+  background-color: #212529; /* A deep, dark slate grey */
+  color: #fff;
+  padding: 2em 1em; /* A bit more padding */
+  text-align: center;
+  font-size: 14px;
+  transition: background-color 0.5s;
+}
+
+header h1 {
+    font-size: 32px;
+}
+
+/* Main content area */
+main {
+  padding: 2em;
+  max-width: 800px; /* Add a max-width for better readability on large screens */
+  margin: 0 auto; /* Center the main container */
+}
+
+.controls {
+    margin-bottom: 2rem;
+    text-align: center; /* Center only the buttons */
+}
+
+button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* A nice blue for buttons */
+    color: white;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0056b3; /* A darker blue on hover */
+}
+
+/* Headings */
+h1, h2 {
+  color: inherit; /* Inherit color from parent */
+}
+
+/* Align text to the left for content sections */
+section {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+/* Ensure the skills list is styled as a proper list */
+.skills-list ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+/* Remove the bright section-specific colors */
+.main-text, .skills { 
+  color: inherit;
+}
+
+/* Links */
+a {
+  color: #007bff; /* Use the same blue for links */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+  background-color: #e9ecef; /* A slightly darker grey for the footer */
+  color: #6c757d; /* A muted grey for footer text */
+  text-align: center;
+  padding: 1.5em;
+  margin-top: 2em;
+}
+
+/* Class to hide elements */
+.hidden {
+    display: none;
+}
