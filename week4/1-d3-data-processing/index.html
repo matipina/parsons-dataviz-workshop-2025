@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3.js Data Processing Examples</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>D3.js Data Processing Concepts</h1>
+        <p>Interactive examples of parsing, grouping, and summarizing data with D3.js.</p>
+    </header>
+    <main>
+        <section>
+            <h2>1. Loading CSV Data with <code>d3.csv()</code></h2>
+            <p>This example loads a simple CSV file and displays its contents as a JSON string.</p>
+            <div class="controls">
+                <button id="load-csv-btn">Load Data</button>
+            </div>
+            <pre id="csv-output" class="output"></pre>
+        </section>
+
+        <section>
+            <h2>2. Grouping Data with <code>d3.group()</code></h2>
+            <p>This example groups the loaded data by a specific category ("Borough").</p>
+            <div class="controls">
+                <button id="group-data-btn">Group Data</button>
+            </div>
+            <pre id="group-output" class="output"></pre>
+        </section>
+
+        <section>
+            <h2>3. Summarizing Data with <code>d3.rollup()</code></h2>
+            <p>This example counts the number of items in each group.</p>
+            <div class="controls">
+                <button id="rollup-data-btn">Rollup Data</button>
+            </div>
+            <pre id="rollup-output" class="output"></pre>
+        </section>
+
+        <section>
+            <h2>4. Parsing Time with <code>d3.timeParse()</code></h2>
+            <p>This example parses a date string into a JavaScript Date object.</p>
+            <div class="controls">
+                <button id="parse-time-btn">Parse Time</button>
+            </div>
+            <pre id="time-output" class="output"></pre>
+        </section>
+    </main>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern JavaScript Concepts</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <header>
+        <h1>Modern JavaScript Concepts for D3.js</h1>
+        <p>A quick review of Arrow Functions, Maps, and Async/Await.</p>
+    </header>
+    <main>
+        <section>
+            <h2>1. Arrow Functions (=>)</h2>
+            <p>A concise way to write functions in JavaScript. They are especially useful for short, anonymous functions used in D3 methods.</p>
+            <div class="controls">
+                <button id="arrow-func-btn">Run Example</button>
+            </div>
+            <pre id="arrow-func-output" class="output"></pre>
+        </section>
+
+        <section>
+            <h2>2. Map Objects</h2>
+            <p>A `Map` holds key-value pairs and remembers the original insertion order of the keys. D3's `d3.group()` and `d3.rollup()` return Maps.</p>
+            <div class="controls">
+                <button id="map-obj-btn">Run Example</button>
+            </div>
+            <pre id="map-obj-output" class="output"></pre>
+        </section>
+
+        <section>
+            <h2>3. Async/Await</h2>
+            <p>A modern way to handle asynchronous operations, like loading data. It makes asynchronous code look and behave more like synchronous code, making it easier to read and write.</p>
+            <div class="controls">
+                <button id="async-await-btn">Run Example</button>
+            </div>
+            <pre id="async-await-output" class="output"></pre>
+        </section>
+    </main>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
