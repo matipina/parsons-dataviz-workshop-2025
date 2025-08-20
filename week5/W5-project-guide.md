@@ -80,30 +80,6 @@ This guide will walk you through using the terminal, Git/GitHub, Python, and AI 
 
 ---
 
-## 5. (Optional) Write a Reflection
-
-- Create a new markdown file (e.g., `reflection.md`) in your repo.
-- Write a short reflection on what you learned and how you used AI tools. See the template below.
-
----
-
-## Reflection Template
-
-```markdown
-# Week 5 Reflection
-
-## What did I learn?
-- 
-
-## How did I use AI tools (Copilot, ChatGPT, Gemini, etc.)?
-- 
-
-## What will I try next?
-- 
-```
-
----
-
 ## Resources
 
 - [GitHub Docs: Getting Started](https://docs.github.com/en/get-started)
